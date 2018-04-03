@@ -23,6 +23,10 @@ function filter (arr, fn){
 }
 
 console.log(filteredNames);
-
-const filterSteroids = (arr, fn) => arr.map(i => fn(i) ? i : arr.pop(i));
-console.log(filteredNames);
+// BOOOOOONNNNNNUUUUSSSSSS!!!!!!
+const filterSteroids = (() => (arr, fn) => arr.filter(fn))();
+const filteredNames2 = filterSteroids(myNames, function(name) {
+  // This is a "predicate function" - it's a function that only returns a boolean
+  return name[0] === 'B';
+});
+console.log(filteredNames2);
