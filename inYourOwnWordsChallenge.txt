@@ -1,0 +1,42 @@
+What is scope? Your explanation should include the idea of global vs. local scope.
+ - Scope is a concept referring to the ability to reference variables. Specifically, the their usage in terms of functions.
+ - Globally scoped variables are variables whose values are able to be accessed from anywhere in your .js files. That is to say, outside and inside of functions.
+ - Locally scoped variables are only accessible by the functions they reside in. More specifically, within the code block between a function's {}'s.
+        :Cameron Prier
+
+Scope refers to the priority given to values assigned to variables. Variables within functions are known to be block (or 
+local scope variables; in other words, these variables are only accessible within the function they are declared.  
+Variables declared outside of functions are referred to as global variables, aptly named because they can be accessed 
+throughout the entire code (in and out of functions) as well as across files.  For example, a variable named 'foo' declared 
+within a given function can not be accessed outside of that function.  However, if a variable named 'bar' is declared outside 
+of any function, it can be accessed in other lines of the code (within or without other functions).
+        :Dominick McKoy
+
+Why are global variables avoided? What are side effects, and what is a pure function?
+ - Avoidance of globally scoped variables is recommended because of their ability to cast 'side effects' upon your code. 
+ - Side effects lead to a mess of bugs and unexpected behaviors which can be a pain to manage for yourself, and for anyone who might be working on the same code.
+ - A pure function is a function that returns the same output if it's given the same inputs every time it is envoked, and is devoid of side-effects as result of its purity. Also known as a 'determinate function'.
+        :Cameron Prier
+
+Unfortunately, global variables can be accessed across linked JavaScript files. Thus, if there are problems in our code due 
+to a global variable, it becomes very difficult to localize and fix.  Furthermore, global variables can change based on how 
+they are used and declared; if a function uses a global variable, it can potentially change its value.  It also means that the
+function does not output the same result when given a single set of arguments.
+        :Dominick McKoy
+
+
+Explain JavaScript's strict mode.
+ - 'use strict' mode helps the browser interpreter manage any variables not defined with a keyword, which are by default globally scoped.
+ - It flags are error to let the developer know that they have made the mistake of assigning a variable a value without declaring it with a keyword. Which is handy in the above principle of avoiding global variables in general.
+        :Cameron Prier
+
+When in strict mode, activated by typing 'use strict'; at the top of your code, the JavaScript interpreter prevents you 
+from declaring a variable without using 'let' or 'const'.  If you try to declare a variable without these keywords (i.e. 
+foo = 'someString'), the interpreter will print an error to the console.
+        :Dominick McKoy
+
+What are side effects, and what is a pure function?
+Side effects are when variables within a function affect variables outside of the function.  This could result in a different 
+output given the same single set of parameters for the given function, or could change global variables.  A pure function, 
+contrastly, localizes all variables and does not have any side effects (in other words, the function will output an expected 
+single result given the same single set of parameters or arguments).
