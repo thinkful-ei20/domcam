@@ -23,3 +23,6 @@ function filter (arr, fn){
 }
 
 console.log(filteredNames);
+
+const filterSteroids = (arr, fn) => arr.map(i => fn(i) ? i : arr.pop(i));
+console.log(filteredNames);
