@@ -1,5 +1,4 @@
 'use strict';
-
 const min = numbers => {
   let minNum = numbers[0];
   let limit = numbers.length - 1;
@@ -12,4 +11,4 @@ const min = numbers => {
   return minNum;
 };
 
-console.log(min([4, 8, 9, 10, 3, 2, 11, -1, -Infinity]));
+console.log(min([4, 8, 9, 10, 3, 2, 11, -1, -Infinity])); // logs -Infinity
